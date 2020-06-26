@@ -1,0 +1,26 @@
+<form #form="ngForm" (submit)="onSave(form)">
+    <h2>Add an Owner</h2>
+    <div class="form-group">
+        <label>Name</label>
+        <input required name="Name"  [(ngModel)]="service.formData.Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input name="LastName"  [(ngModel)]="service.formData.LastName" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="number" name="PhoneNumber" [(ngModel)]="service.formData.PhoneNumber" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Country</label>
+        <input name="Country" [(ngModel)]="service.formData.Country" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>City</label>
+        <input name="City" [(ngModel)]="service.formData.City" class="form-control">
+    </div>
+    <div class="form-group">
+        <button type="submit" style="background-color:gray" class="btn btn-lg btn-block">SAVE</button>
+    </div>
+</form>

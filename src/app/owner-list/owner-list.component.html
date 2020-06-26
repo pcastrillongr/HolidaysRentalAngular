@@ -1,0 +1,50 @@
+<table class ="table table-hover" style="cursor: pointer;"> 
+    <h2>List of owners</h2>
+    <tr *ngFor = "let own of service.listOwners" (click)="onSelect(own)">
+        <td >Name - {{own.Name}}</td>
+        <td>Last Name - {{own.LastName}}</td>
+        <td>Phone Number -{{own.PhoneNumber}}</td>
+        <td>Country - {{own.Country}}</td>
+        <td>City - {{own.City}}</td>
+        <button (click) = "removeItem(own)">Delete</button>
+        <button (click)='getRentalsByOwner(own)'>ListHomeRental</button>
+
+    </tr>
+    <button (click)="showAddOwner()">Add Owner</button>
+
+</table>
+
+    <div class='updateOwner' *ngIf="selectedOwner">
+
+        <form #form="ngForm" (submit)="onUpdate(form)">
+            <h2>Update the Owner</h2>
+            <div class="form-group" hidden>
+                <label>Name</label>
+                <input name="OwnerId"  [(ngModel)]="selectedOwner.OwnerId" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input name="Name"  [(ngModel)]="selectedOwner.Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input name="LastName"  [(ngModel)]="selectedOwner.LastName" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input name="PhoneNumber" [(ngModel)]="selectedOwner.PhoneNumber" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Country</label>
+                <input name="Country" [(ngModel)]="selectedOwner.Country" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input name="City" [(ngModel)]="selectedOwner.City" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-block">SAVE</button>
+            </div>
+        </form>        
+        </div>
+

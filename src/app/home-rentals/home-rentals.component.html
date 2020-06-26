@@ -1,0 +1,18 @@
+<div class="jumbtron">
+    <div class="row">
+        <div class="col-md-5">
+            <app-owner-list></app-owner-list>
+        </div>
+    </div>
+</div>
+        <!-- <div class="col-md-5">
+            <app-home-rental></app-home-rental>
+        </div> -->
+        <div class="jumbtron2" *ngIf="getShowOwnerValue()">
+            <div class="row">
+    <div class="col-md-7">
+        <app-owner  class="add-owner"></app-owner>
+    </div>
+
+    </div>
+</div>

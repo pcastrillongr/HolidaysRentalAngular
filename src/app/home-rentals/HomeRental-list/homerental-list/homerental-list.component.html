@@ -1,0 +1,9 @@
+<table class ="table table-hover" style="cursor: pointer;"> 
+    <h2>List of Rentals of Owner</h2>
+    <tr *ngFor = "let rental of service.listRentals">
+        <td >NHome Name - {{rental.Name}}</td>
+        <td>Country - {{rental.Country}}</td>
+        <td>City - {{rental.City}}</td>
+
+    </tr>
+</table>
